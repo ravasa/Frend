@@ -1,0 +1,137 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+  background: radial-gradient(circle at top left, #ffffff 0, #f5f7fb 52%, #e9eef7 100%);
+}
+
+.component-preview {
+  width: min(100%, 520px);
+  padding: 40px;
+  border: 1px solid #dce3ed;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 48px rgba(37, 56, 88, 0.12);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #59677d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #111a2b;
+  font-size: clamp(32px, 7vw, 48px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  max-width: 36ch;
+  margin: 16px 0 32px;
+  color: #59677d;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.logo-set {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.logo-option {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  padding: 16px;
+  border: 1px solid #dce3ed;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.logo-option__label {
+  color: #59677d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.axa-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #00008f;
+  color: #fff;
+}
+
+.axa-mark__word {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+  font-family: Arial Black, Arial, sans-serif;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -0.14em;
+  transform: skew(-8deg);
+}
+
+.axa-mark__slash {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 18px;
+  width: 4px;
+  height: 122px;
+  background: #e6282f;
+  transform: rotate(38deg);
+  transform-origin: center;
+}
+
+.axa-mark--inverse {
+  background: #fff;
+  color: #00008f;
+  border: 1px solid #00008f;
+}
+
+@media (max-width: 480px) {
+  .component-preview {
+    padding: 28px 20px;
+  }
+
+  .logo-set {
+    grid-template-columns: 1fr;
+  }
+}
